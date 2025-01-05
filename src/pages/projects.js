@@ -4,19 +4,17 @@ import Layout from '../components/Layout'
 import AnimatedText from '../components/AnimatedText'
 import Link from 'next/link'
 import Image from 'next/image'
-import { GithubIcon, Youtube } from './../components/Icons';
+import {Youtube } from './../components/Icons';
 import project1 from '../../public/images/projects/Amore Banquet Hall.png'
 import project2 from '../../public/images/projects/Assotech blith.png'
 import project3 from '../../public/images/projects/Embark plaza.png'
 import project4 from '../../public/images/projects/G.K INDUSTRIES.png'
-import project5 from '../../public/images/projects/Kamrah Institute   of Info. & Tech..png'
 import project6 from '../../public/images/projects/Koyal-Enclave.png'
 import project7 from '../../public/images/projects/Parsvnath Paramount.png'
 import project8 from '../../public/images/projects/Shivoy Street.png'
 import project9 from '../../public/images/projects/smart villas.png'
 import project10 from '../../public/images/projects/Super tik Stamps.png'
 import project11 from '../../public/images/projects/White orchid.png'
-import project12 from '../../public/images/projects/World Infracon centre.png'
 import { motion } from 'framer-motion';
 import TransitionEffect from '../components/TransitionEffect'
 

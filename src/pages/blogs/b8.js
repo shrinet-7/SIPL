@@ -4,7 +4,7 @@ import article8 from '../../../public/images/articles/b8.jpg';
 import Head from 'next/head'
 
 const B8 = () => {
-    const [isDarkMode, setIsDarkMode] = useState(false);
+    const [isDarkMode] = useState(false);
 
     return (
       <>

@@ -5,7 +5,7 @@ import Head from 'next/head'
 
 
 const B2 = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode] = useState(false);
 
   return (
     <>

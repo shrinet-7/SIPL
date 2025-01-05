@@ -21,13 +21,8 @@ import article8 from '../../public/images/articles/b8.jpg'
 import article9 from '../../public/images/articles/b9.jpg'
 import article10 from '../../public/images/articles/b10.jpg'
 
-import img1 from '../../public/images/property/i1.jpg'
-import img2 from '../../public/images/property/i2.jpg'
-import img3 from '../../public/images/property/i3.jpg'
-import img4 from '../../public/images/property/i4.jpg'
 import { motion, useMotionValue } from 'framer-motion';
 import TransitionEffect from '../components/TransitionEffect';
-import { useState } from 'react';
 
 
 
@@ -45,7 +40,7 @@ const MovingImg = ({ title, img, link }) => {
         y.set(-10);
     }
 
-    function handleMouseLeave(event) {
+    function handleMouseLeave() {
         imgRef.current.style.display = "none";
         x.set(0);
         y.set(0);
@@ -100,64 +95,82 @@ const Properties = () => {
 
     const ncrProperties = [
         {
-            name: 'Luxurious Villa in Noida',
-            price: '₹1.5 Cr',
-            link: '/properties/delhincr',
-            img: '/images/property/ncr1.jpg',
+            name: 'Modern Apartment in Noida',
+            whatsappLink: 'https://wa.me/9718269561?text=I%20am%20interested%20in%20Modern%20Apartment%20in%20Noida',
+            price: "Query Now",
+            img: '/images/property/noida.jpg',
         },
         {
-            name: 'Modern Apartment in Ghaziabad',
-            price: '₹90 Lakh',
-            link: '/properties/ncr/apartment',
-            img: '/images/property/ncr2.jpg',
+            name: 'Modern Apartment in Raj Nagar',
+            whatsappLink: 'https://wa.me/9718269561?text=I%20am%20interested%20in%20Modern%20Apartment%20in%20Noida',
+            price: "Query Now",
+            img: '/images/property/raj_nagar.jpg',
         },
         {
-            name: 'Prime Plot in Greater Noida',
-            price: '₹75 Lakh',
-            link: '/properties/ncr/plot',
-            img: '/images/property/ncr3.jpg',
+            name: 'Modern Apartment in Siddhart Vihar',
+            whatsappLink: 'https://wa.me/9718269561?text=I%20am%20interested%20in%20Modern%20Apartment%20in%20Noida',
+            price: "Query Now",
+            img: '/images/property/siddhart_vihar.jpg',
+        },
+        {
+            name: 'Modern Apartment in Vasundhara',
+            whatsappLink: 'https://wa.me/9718269561?text=I%20am%20interested%20in%20Modern%20Apartment%20in%20Noida',
+            price: "Query Now",
+            img: '/images/property/vasundhra.jpg',
         },
     ];
 
     const haryanaProperties = [
         {
-            name: 'Eco-Friendly Home in Gurgaon',
-            price: '₹1.2 Cr',
-            link: '/properties/haryana/home',
-            img: '/images/property/haryana1.jpg',
+            name: 'Premium Plots near Jewar Airport',
+            whatsappLink: 'https://wa.me/9718269561?text=I%20am%20interested%20in%20Modern%20Apartment%20in%20Noida',
+            price: "Query Now",
+            img: '/images/property/i1.jpg',
         },
         {
-            name: 'Premium Villa in Faridabad',
-            price: '₹1.8 Cr',
-            link: '/properties/haryana/villa',
-            img: '/images/property/haryana2.jpg',
+            name: 'Premium Plots near Jewar Airport',
+            whatsappLink: 'https://wa.me/9718269561?text=I%20am%20interested%20in%20Modern%20Apartment%20in%20Noida',
+            price: "Query Now",
+            img: '/images/property/i2.jpg',
         },
         {
-            name: 'Prime Location Plot in Sonipat',
-            price: '₹60 Lakh',
-            link: '/properties/haryana/plot',
-            img: '/images/property/haryana3.jpg',
+            name: 'Premium Plots near Jewar Airport',
+            whatsappLink: 'https://wa.me/9718269561?text=I%20am%20interested%20in%20Modern%20Apartment%20in%20Noida',
+            price: "Query Now",
+            img: '/images/property/i3.jpg',
+        },
+        {
+            name: 'Premium Plots near Jewar Airport',
+            whatsappLink: 'https://wa.me/9718269561?text=I%20am%20interested%20in%20Modern%20Apartment%20in%20Noida',
+            price: "Query Now",
+            img: '/images/property/i4.jpg',
         },
     ];
 
     const uttarakhandProperties = [
         {
-            name: 'Cottage in Dehradun',
-            price: '₹1.3 Cr',
-            link: '/properties/uttarakhand/cottage',
-            img: '/images/property/uttarakhand1.jpg',
+            name: 'Scenic Plots, Dehradun',
+            whatsappLink: 'https://wa.me/9718269561?text=I%20am%20interested%20in%20Modern%20Apartment%20in%20Noida',
+            price: "Query Now",
+            img: '/images/property/u1.jpg',
         },
         {
-            name: 'Vacation Villa in Nainital',
-            price: '₹2 Cr',
-            link: '/properties/uttarakhand/villa',
-            img: '/images/property/uttarakhand2.jpg',
+            name: 'Luxurious Cottages, Padampuri',
+            whatsappLink: 'https://wa.me/9718269561?text=I%20am%20interested%20in%20Modern%20Apartment%20in%20Noida',
+            price: "Query Now",
+            img: '/images/property/u3.jpg',
         },
         {
-            name: 'Scenic Plot in Mussoorie',
-            price: '₹70 Lakh',
-            link: '/properties/uttarakhand/plot',
-            img: '/images/property/uttarakhand3.jpg',
+            name: 'Osho Hills Cottages, Mussoorie',
+            whatsappLink: 'https://wa.me/9718269561?text=I%20am%20interested%20in%20Modern%20Apartment%20in%20Noida',
+            price: "Query Now",
+            img: '/images/property/u4.jpg',
+        },
+        {
+            name: 'Amoda Sari Plots, Almora',
+            whatsappLink: 'https://wa.me/9718269561?text=I%20am%20interested%20in%20Modern%20Apartment%20in%20Noida',
+            price: "Query Now",
+            img: '/images/property/u5.jpg',
         },
     ];
 
@@ -220,7 +233,11 @@ const Properties = () => {
             >
                 {properties.map((property, index) => (
                     <SwiperSlide key={index}>
-                        <Link href={property.link}>
+                        <a
+                            href={property.whatsappLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             <div className="flex flex-col items-center border rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105 duration-300 rectangle-card">
                                 <Image
                                     src={property.img}
@@ -236,7 +253,7 @@ const Properties = () => {
                                     <p className="text-lg lg:text-md text-primary">{property.price}</p>
                                 </div>
                             </div>
-                        </Link>
+                        </a>
                     </SwiperSlide>
                 ))}
             </Swiper>
@@ -270,24 +287,24 @@ const Properties = () => {
                         className="mb-8 lg:mb-16 !text-4xl lg:!text-3xl sm:mb-6 sm:!text-xl xs:!text-lg text-dark dark:text-light font-semibold border-b-4 border-primary dark:border-primaryDark pb-2"
                     />
 
-                    
+
                     {/* Region Filter */}
-                    <div className="flex justify-center items-center mb-6 lg:mb-8 ">
+                    <div className="flex justify-center items-center mb-6 lg:mb-8">
                         <button
                             onClick={() => scrollToSection(ncrRef)}
-                            className="mx-1 lg:mx-2 px-4 py-2 !text-2xl lg:!text-xl font-medium border rounded-lg bg-light text-dark border-dark hover:bg-primary hover:text-white transition dark:bg-dark dark:text-light dark:border-light"
+                            className="mx-1 lg:mx-2 px-4 py-2 !text-2xl lg:!text-lg sm:!text-xs  font-medium border rounded-lg bg-light text-dark border-dark hover:bg-primary hover:text-white transition dark:bg-dark dark:text-light dark:border-light"
                         >
                             NCR
                         </button>
                         <button
                             onClick={() => scrollToSection(haryanaRef)}
-                            className="mx-1 lg:mx-2 px-4 py-2 text-2xl lg:text-xl font-medium border rounded-lg bg-light text-dark border-dark hover:bg-primary hover:text-white transition dark:bg-dark dark:text-light dark:border-light"
+                            className="mx-1 lg:mx-2 px-4 py-2 text-2xl lg:!text-lg sm:!text-xs font-medium border rounded-lg bg-light text-dark border-dark hover:bg-primary hover:text-white transition dark:bg-dark dark:text-light dark:border-light"
                         >
                             Haryana
                         </button>
                         <button
                             onClick={() => scrollToSection(uttarakhandRef)}
-                            className="mx-1 lg:mx-2 px-4 py-2 text-2xl lg:!text-xl font-medium border rounded-lg bg-light text-dark border-dark hover:bg-primary hover:text-white transition dark:bg-dark dark:text-light dark:border-light"
+                            className="mx-1 lg:mx-2 px-4 py-2 text-2xl lg:!text-lg sm:!text-xs font-medium border rounded-lg bg-light text-dark border-dark hover:bg-primary hover:text-white transition dark:bg-dark dark:text-light dark:border-light"
                         >
                             Uttarakhand
                         </button>

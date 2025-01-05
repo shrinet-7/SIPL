@@ -84,7 +84,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { FaInstagram, FaTwitter, FaYoutube, FaFacebook, FaLinkedin } from 'react-icons/fa';
+import { FaInstagram, FaYoutube, FaFacebook } from 'react-icons/fa';
 
 const Footer = () => {
   return (
@@ -110,28 +110,28 @@ const Footer = () => {
             <p className="text-lg mb-2">Address: Office no. 1426 - Galaxy Diamond Plaza, Greater Noida West</p>
             <p className="text-lg mb-2">Phone: +91-9718269561</p>
             <p className="text-lg mb-2">Email: contact.siplproperties@gmail.com</p>
-            <p className="text-lg mb-2">Website: <Link href="https://www.sipl.com" className="text-red-500">www.sipl.com</Link></p>
+            {/* <p className="text-lg mb-2">Website: <Link href="https://www.sipl.com" className="text-red-500">www.sipl.com</Link></p> */}
           </div>
 
           {/* Social Media Section */}
           <div className="flex flex-col mb-8 w-1/3">
             <h3 className="text-2xl font-bold mb-4">Follow Us</h3>
             <div className="flex gap-4 text-xl">
-              <Link href="https://instagram.com/your-instagram" target="_blank" className="hover:text-red-500">
+              <Link href="https://www.instagram.com/sipl.properties" target="_blank" className="hover:text-red-500">
                 <FaInstagram />
               </Link>
-              <Link href="https://twitter.com/your-twitter" target="_blank" className="hover:text-red-500">
+              {/* <Link href="https://twitter.com/your-twitter" target="_blank" className="hover:text-red-500">
                 <FaTwitter />
-              </Link>
-              <Link href="https://youtube.com/your-youtube" target="_blank" className="hover:text-red-500">
+              </Link> */}
+              <Link href="https://www.youtube.com/@shrinetinfrastructure" target="_blank" className="hover:text-red-500">
                 <FaYoutube />
               </Link>
-              <Link href="https://facebook.com/your-facebook" target="_blank" className="hover:text-red-500">
+              <Link href="https://www.facebook.com/profile.php?id=61567031406043&mibextid=JRoKGi" target="_blank" className="hover:text-red-500">
                 <FaFacebook />
               </Link>
-              <Link href="https://linkedin.com/in/your-linkedin" target="_blank" className="hover:text-red-500">
+              {/* <Link href="https://linkedin.com/in/your-linkedin" target="_blank" className="hover:text-red-500">
                 <FaLinkedin />
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>
@@ -141,7 +141,7 @@ const Footer = () => {
           <span>{new Date().getFullYear()} &copy; All Rights Reserved.</span>
           <div className="flex items-center lg:py-2">
             Build with <span className="text-primary dark:text-primaryDark text-2xl px-1">&#9825;</span> by&nbsp;
-            <Link href="/" className="underline underline-offset-2" target="_blank">DCC</Link>
+            <Link href="https://www.instagram.com/digitalcraftco.dcc?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" className="underline underline-offset-2" target="_blank">DCC</Link>
           </div>
           <Link href="/contact" className="underline underline-offset-2">Say hello!!</Link>
         </div>

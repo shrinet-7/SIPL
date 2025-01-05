@@ -57,7 +57,7 @@ export default function Home() {
                 </p>
               </div>
               <div className='flex items-center self-start mt-2 lg:self-center'>
-                <Link href="/dummy.pdf" target={'_blank'}
+                <Link href="/profile.pdf" target={'_blank'}
                   className='flex items-center bg-dark text-light px-6 py-2.5 rounded-lg text-lg font-semibold   
                          hover:bg-light hover:text-dark 
                          border-2 border-solid border-transparent hover:border-dark
@@ -65,8 +65,8 @@ export default function Home() {
                          dark:text-dark dark:bg-light hover:dark:bg-dark hover:dark:text-light 
                          hover:dark:border-light md:p-2 md:px-4 md:text-base
                          '
-                // download={true}
-                >Brochure <LinkArrow className={"w-6 ml-1"} />
+                download={true}
+                >portfolio <LinkArrow className={"w-6 ml-1"} />
 
                 </Link>
                 <Link href="/contact"

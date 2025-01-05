@@ -10,7 +10,7 @@ const VasundharaPropertyPage = () => {
 
     // Images grouped into collages (each array represents one collage)
     const collages = [
-        ['/images/property/i.jpg', '/images/property/i2.jpg', '/images/property/i3.jpg', '/images/property/i4.jpg'],
+        ['/images/property/noida.jpg', '/images/property/i2.jpg', '/images/property/i3.jpg', '/images/property/i4.jpg'],
         ['/images/property/v5.jpg', '/images/property/v6.jpg', '/images/property/v7.jpg', '/images/property/i2.jpg'],
         ['/images/property/v9.jpg', '/images/property/v10.jpg', '/images/property/v11.jpg', '/images/property/v12.jpg'],
     ];

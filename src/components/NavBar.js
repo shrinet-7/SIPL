@@ -2,10 +2,9 @@ import Link from 'next/link'
 import React, { useState } from 'react'
 import Logo from './Logo'
 import { useRouter } from 'next/router'
-import { TwitterIcon, DribbbleIcon, GithubIcon, LinkedInIcon, PinterestIcon, SunIcon, MoonIcon, Instagram, Facebook, Youtube } from './Icons'
+import { TwitterIcon, LinkedInIcon, SunIcon, MoonIcon, Instagram, Facebook, Youtube } from './Icons'
 import { motion } from "framer-motion"
 import useThemeSwitcher from './hooks/useThemeSwitcher';
-import { useFormState } from 'react-dom'
 
 const CustomLink = ({ href, title, className = "" }) => {
   const router = useRouter();
@@ -83,13 +82,13 @@ const NavBar = () => {
         </nav>
 
         <nav className='flex items-center justify-center flex-wrap'>
-          <motion.a href='https://twitter.com' target={"_blank"}
+          {/* <motion.a href='https://twitter.com' target={"_blank"}
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
             className='w-6 mx-3'
           >
             <TwitterIcon />
-          </motion.a>
+          </motion.a> */}
           <motion.a href='https://www.instagram.com/sipl.properties' target={"_blank"}
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
@@ -97,13 +96,13 @@ const NavBar = () => {
           >
             <Instagram/>
           </motion.a>
-          <motion.a href='https://twitter.com' target={"_blank"}
+          {/* <motion.a href='https://twitter.com' target={"_blank"}
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
             className='w-6 mx-3'
           >
             <LinkedInIcon />
-          </motion.a>
+          </motion.a> */}
           <motion.a href='https://www.facebook.com/profile.php?id=61567031406043&mibextid=JRoKGi' target={"_blank"} className='w-6 mx-3 bg-light rounded-full'
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
@@ -155,26 +154,26 @@ const NavBar = () => {
             </nav>
 
             <nav className='flex items-center justify-center flex-wrap mt-2'>
-              <motion.a href='https://twitter.com' target={"_blank"}
+              {/* <motion.a href='https://twitter.com' target={"_blank"}
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.9 }}
                 className='w-6 mx-3 sm:mx-1'
               >
                 <TwitterIcon />
-              </motion.a>
+              </motion.a> */}
               <motion.a href='https://www.instagram.com/sipl.properties' target={"_blank"} className='w-6 mx-3 rounded-full dark:bg-dark sm:mx-1'
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.9 }}
               >
                 <Instagram/>
               </motion.a>
-              <motion.a href='https://twitter.com' target={"_blank"}
+              {/* <motion.a href='https://twitter.com' target={"_blank"}
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.9 }}
                 className='w-6 mx-3 sm:mx-1'
               >
                 <LinkedInIcon />
-              </motion.a>
+              </motion.a> */}
               <motion.a href='https://www.facebook.com/profile.php?id=61567031406043&mibextid=JRoKGi' target={"_blank"} className='w-6 mx-3 bg-light rounded-full sm:mx-1'
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.9 }}

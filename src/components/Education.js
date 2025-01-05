@@ -2,7 +2,9 @@ import { motion, useScroll } from 'framer-motion'
 import React, { useRef } from 'react'
 import LiIcon from './LiIcon'
 import Image from 'next/image';
-import vishav from '../../public/images/profile/vishav.jpg'
+import dcc from '../../public/images/profile/dcc.jpg'
+import d from '../../public/images/profile/d.jpg'
+import kc from '../../public/images/profile/kc.png'
 
 
 const Details = ({ type, info, pic }) => {
@@ -21,18 +23,18 @@ const Details = ({ type, info, pic }) => {
                     <Image
                         src={pic}
                         width={150}
-                        alt="Picture of the author"
+                        alt="Picture of the Director"
                         className='rounded-full h-fit'
                     />
                     <div>
-                        <h3 className='capitalize font-bold text-4xl sm:text-xl xs:text-lg text-balance mt-7 sm:text-justify'>
+                        <h3 className='capitalize font-bold text-2xl sm:text-lg xs:text-xs text-balance mt-7 sm:text-justify'>
                             &nbsp;{type}&nbsp;
                         </h3>
                         <p>&nbsp;</p>
-                        <p className='font-medium w-full md:text-sm ml-3 xs:hidden'>
+                        <p className='font-medium w-full md:text-sm ml-3 xs:text-xs'>
                             {info}
                         </p>
-                       
+
                     </div>
 
                 </div>
@@ -65,34 +67,25 @@ const Education = () => {
                      md:w-[2px] md:left-[30px] xs:left-[20px]
                     ' />
 
-                <ul className='w-full flex flex-col items-start justify-between ml-4 xs:ml-2'>
+                <ul className='w-full flex flex-col items-start justify-between ml-4 xs:ml-2' >
 
                     <Details
-                        pic={vishav}
-                        type="Director"
-                        info=" oversees operations"
+                        pic={d}
+                        type="Director&nbsp;and&nbsp;Founder"
+                        info=" Mr.&nbsp;Sanjay&nbsp;kumar&nbsp;Singh"
                     />
                     <Details
-                        pic={vishav}
-                        type="Director"
-                        info=" oversees operations"
+                        pic={kc}
+                        type="Associate&nbsp;Partner"
+                        info=" Karalee&nbsp;Construction"
                     />
                     <Details
-                        pic={vishav}
-                        type="Director"
-                        info=" oversees operations"
+                        pic={dcc}
+                        type="Digital&nbsp;Manager"
+                        info=" Digital&nbsp;Craft&nbsp;C0."
                     />
-                    <Details
-                        pic={vishav}
-                        type="Director"
-                        info=" oversees operations"
-                    />
-                    <Details
-                        pic={vishav}
-                        type="Director"
-                        info=" oversees operations"
-                    />
-                   
+
+
                     {/* <Details
                         pic={vishav}
                         type="Director"
@@ -103,7 +96,7 @@ const Education = () => {
                         type="Director"
                         info=" oversees strategic planning, financial management, regulatory compliance, stakeholder engagement, project oversight, marketing strategies, risk management, and performance evaluation to ensure successful construction and sales operations."
                     /> */}
-                   
+
 
 
                 </ul>

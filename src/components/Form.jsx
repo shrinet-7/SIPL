@@ -26,7 +26,7 @@ export default function App() {
                         id: toastId
                     })
                 },
-                (error) => {
+                () => {
                     toast.error("There was an error when sending your message, please try again later! ", {
                         id: toastId
                     })
@@ -54,7 +54,7 @@ export default function App() {
             <Toaster richColors={true} />
 
         <form onSubmit={handleSubmit(onSubmit)}
-            className='max-w-md w-full flex flex-col items-center justify-center space-y-4 sm:max-w-xs md:p-4'
+            className='max-w-lg w-full flex flex-col items-center justify-center space-y-4 sm:max-w-xs md:p-4'
         >
             <input type="text" placeholder="Name" {...register("Name", {
                 required: 'This field is required !!',
@@ -106,7 +106,7 @@ export default function App() {
                         message: 'Message should be less than 500 characters.'
                     }
                 })}
-                className='w-full p-2 rounded-md shadow-lg focus:outline-none focus:ring-2 focus:ring-primary overflow-hidden'
+                className='w-full p-4 rounded-md shadow-lg focus:outline-none focus:ring-2 focus:ring-primary overflow-hidden'
             />
             {
                 errors.Message && <span className='inline-block self-start text-primary'>{errors.Message.message}</span>
@@ -131,32 +131,3 @@ export default function App() {
         
     );
 }
-
-
-
-// import React from 'react';
-// import { useForm } from 'react-hook-form';
-
-// export default function App() {
-//     const { register, handleSubmit, formState: { errors } } = useForm();
-//     const onSubmit = data => console.log(data);
-//     console.log(errors);
-
-//     return (
-//         <form onSubmit={handleSubmit(onSubmit)}>
-//             <input type="text" placeholder="Name" {...register("Name", { required: true })} />
-//             <input type="text" placeholder="Email" {...register("Email", { required: true, pattern: /^\S+@\S+$/i })} />
-//             <input type="tel" placeholder="Mobile number" {...register("Mobile number", { required: true, minLength: 6, maxLength: 12 })} />
-            // <select {...register("Services  ")}>
-            //     <option value="constuction">
-            //         constuction
-            //     </option>
-            //     <option value="constuction">
-            //         rebuild
-            //     </option>
-            // </select>
-
-//             <input type="submit" />
-//         </form>
-//     );
-// }
