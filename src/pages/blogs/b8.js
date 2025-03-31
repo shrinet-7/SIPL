@@ -4,25 +4,25 @@ import article8 from '../../../public/images/articles/b8.jpg';
 import Head from 'next/head'
 
 const B8 = () => {
-    const [isDarkMode] = useState(false);
+  const [isDarkMode] = useState(false);
 
-    return (
-      <>
-        <Head>
-          <title>SIPL | Blogs</title>
-          <meta name="description" content='any description' />
-        </Head>
-            <div
-                style={{
-                    fontFamily: 'Arial, sans-serif',
-                    lineHeight: '2',
-                    padding: '20px',
-                    backgroundColor: isDarkMode ? '#1c1c1c' : '#ffffff',
-                    color: isDarkMode ? '#f5f5f5' : '#2d3436',
-                    minHeight: '100vh',
-                }}
-            >
-                <style jsx>{`
+  return (
+    <>
+      <Head>
+        <title>SIPL | Blogs</title>
+        <meta name="description" content="any description" />
+      </Head>
+      <div
+        style={{
+          fontFamily: 'Arial, sans-serif',
+          lineHeight: '2',
+          padding: '20px',
+          backgroundColor: isDarkMode ? '#1c1c1c' : '#ffffff',
+          color: isDarkMode ? '#f5f5f5' : '#2d3436',
+          minHeight: '100vh',
+        }}
+      >
+        <style jsx>{`
           h1 {
             text-align: center;
             color: ${isDarkMode ? '#f5f5f5' : '#2c3e50'};
@@ -84,30 +84,30 @@ const B8 = () => {
           }
         `}</style>
 
-                <h1>How to Evaluate the Potential of a Property</h1>
-                <p className="subheading">Factors to consider when assessing a property's value and investment potential.</p>
-                <div className="image-container">
-                    <Image src={article8} alt="Property Evaluation" width={800} height={400} priority />
-                </div>
-                <article>
-                    <h2>Introduction</h2>
-                    <p>
-                        Evaluating a property's potential involves assessing its physical condition, location, and long-term market trends.
-                    </p>
+        <h1>How to Evaluate the Potential of a Property</h1>
+        <p className="subheading">Factors to consider when assessing a property&apos;s value and investment potential.</p>
+        <div className="image-container">
+          <Image src={article8} alt="Property Evaluation" width={800} height={400} priority />
+        </div>
+        <article>
+          <h2>Introduction</h2>
+          <p>
+            Evaluating a property&apos;s potential involves assessing its physical condition, location, and long-term market trends.
+          </p>
 
-                    <h2>Key Evaluation Criteria</h2>
-                    <ul>
-                        <li>Market trends in the surrounding area.</li>
-                        <li>Condition and age of the property.</li>
-                        <li>Availability of utilities and amenities.</li>
-                    </ul>
+          <h2>Key Evaluation Criteria</h2>
+          <ul>
+            <li>Market trends in the surrounding area.</li>
+            <li>Condition and age of the property.</li>
+            <li>Availability of utilities and amenities.</li>
+          </ul>
 
-                    <h2>Conclusion</h2>
-                    <p>Investors must look beyond the property's initial cost and consider its long-term value and potential for appreciation.</p>
-                </article>
-            </div>
-        </>
-    );
+          <h2>Conclusion</h2>
+          <p>Investors must look beyond the property&apos;s initial cost and consider its long-term value and potential for appreciation.</p>
+        </article>
+      </div>
+    </>
+  );
 };
 
 export default B8;

@@ -24,7 +24,7 @@ import article10 from '../../public/images/articles/b10.jpg'
 import { motion, useMotionValue } from 'framer-motion';
 import TransitionEffect from '../components/TransitionEffect';
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import InquiryForm from "../components/InquiryForm"; 
 
 
