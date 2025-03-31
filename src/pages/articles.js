@@ -24,6 +24,8 @@ import article10 from '../../public/images/articles/b10.jpg'
 import { motion, useMotionValue } from 'framer-motion';
 import TransitionEffect from '../components/TransitionEffect';
 
+import { useState, useEffect } from "react";
+import InquiryForm from "../components/InquiryForm"; 
 
 
 const FramerImage = motion(Image);
@@ -84,7 +86,26 @@ const Article = ({ img, title, date, link }) => {
     )
 }
 
+
+
+
 const Properties = () => {
+
+    const [isFormOpen, setIsFormOpen] = useState(false);
+    const [selectedProperty, setSelectedProperty] = useState(null);
+
+    const openForm = (propertyName) => {
+        setSelectedProperty(propertyName);
+        setIsFormOpen(true);
+    };
+
+    const closeForm = () => {
+        setIsFormOpen(false);
+        setSelectedProperty(null);
+    };
+
+
+
     const ncrRef = useRef(null);
     const haryanaRef = useRef(null);
     const uttarakhandRef = useRef(null);
@@ -96,8 +117,6 @@ const Properties = () => {
     const ncrProperties = [
         {
             name: 'Modern Apartment in Noida',
-            whatsappLink: 'https://wa.me/9718269561?text=I%20am%20interested%20in%20Modern%20Apartment%20in%20Noida',
-            price: "Query Now",
             img: '/images/property/noida.jpg',
         },
         {
@@ -107,7 +126,7 @@ const Properties = () => {
             img: '/images/property/raj_nagar.jpg',
         },
         {
-            name: 'Modern Apartment in Siddhart Vihar',
+            name: 'Luxury Apartment, Siddhart Vihar',
             whatsappLink: 'https://wa.me/9718269561?text=I%20am%20interested%20in%20Modern%20Apartment%20in%20Noida',
             price: "Query Now",
             img: '/images/property/siddhart_vihar.jpg',
@@ -214,8 +233,54 @@ const Properties = () => {
     //     </div>
     // );
 
-    const renderSlider = (title, properties, ref) => (
-        <div ref={ref} className="w-full mb-16">
+    // const renderSlider = (title, properties, ref) => (
+    //     <div ref={ref} className="w-full mb-16">
+    //         <h2 className="text-3xl lg:text-2xl font-bold mb-6 lg:mb-8">{title}</h2>
+    //         <Swiper
+    //             modules={[Navigation, Pagination, Autoplay]}
+    //             spaceBetween={15}
+    //             slidesPerView={1}
+    //             navigation
+    //             pagination={{ clickable: true }}
+    //             autoplay={{ delay: 4000, disableOnInteraction: false }}
+    //             breakpoints={{
+    //                 640: { slidesPerView: 1 },
+    //                 768: { slidesPerView: 2 },
+    //                 1024: { slidesPerView: 3 },
+    //             }}
+    //             className="property-slider"
+    //         >
+    //             {properties.map((property, index) => (
+    //                 <SwiperSlide key={index}>
+    //                     <a
+    //                         href={property.whatsappLink}
+    //                         target="_blank"
+    //                         rel="noopener noreferrer"
+    //                     >
+    //                         <div className="flex flex-col items-center border rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105 duration-300 rectangle-card">
+    //                             <Image
+    //                                 src={property.img}
+    //                                 alt={property.name}
+    //                                 width={400}
+    //                                 height={200}
+    //                                 className="w-full h-40 lg:h-48 object-cover"
+    //                             />
+    //                             <div className="p-4 text-center">
+    //                                 <h3 className="text-lg lg:text-lg font-semibold mb-1 lg:mb-2">
+    //                                     {property.name}
+    //                                 </h3>
+    //                                 <p className="text-lg lg:text-md text-primary">{property.price}</p>
+    //                             </div>
+    //                         </div>
+    //                     </a>
+    //                 </SwiperSlide>
+    //             ))}
+    //         </Swiper>
+    //     </div>
+    // );
+
+    const renderSlider = (title, properties) => (
+        <div className="w-full mb-16">
             <h2 className="text-3xl lg:text-2xl font-bold mb-6 lg:mb-8">{title}</h2>
             <Swiper
                 modules={[Navigation, Pagination, Autoplay]}
@@ -233,34 +298,31 @@ const Properties = () => {
             >
                 {properties.map((property, index) => (
                     <SwiperSlide key={index}>
-                        <a
-                            href={property.whatsappLink}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <div className="flex flex-col items-center border rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105 duration-300 rectangle-card">
-                                <Image
-                                    src={property.img}
-                                    alt={property.name}
-                                    width={400}
-                                    height={200}
-                                    className="w-full h-40 lg:h-48 object-cover"
-                                />
-                                <div className="p-4 text-center">
-                                    <h3 className="text-lg lg:text-lg font-semibold mb-1 lg:mb-2">
-                                        {property.name}
-                                    </h3>
-                                    <p className="text-lg lg:text-md text-primary">{property.price}</p>
-                                </div>
+                        <div className="flex flex-col items-center border rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105 duration-300 rectangle-card">
+                            <Image
+                                src={property.img}
+                                alt={property.name}
+                                width={400}
+                                height={200}
+                                className="w-full h-40 lg:h-48 object-cover"
+                            />
+                            <div className="p-4 text-center">
+                                <h3 className="text-lg lg:text-lg font-semibold mb-1 lg:mb-2">
+                                    {property.name}
+                                </h3>
+                                <button
+                                    onClick={() => openForm(property.name)}
+                                    className="bg-green-600 text-white py-2 px-4 rounded-lg mt-2"
+                                >
+                                    Query Now
+                                </button>
                             </div>
-                        </a>
+                        </div>
                     </SwiperSlide>
                 ))}
             </Swiper>
         </div>
     );
-
-
 
     return (
         <>
@@ -320,8 +382,7 @@ const Properties = () => {
                     {renderSlider('Uttarakhand Properties', uttarakhandProperties, uttarakhandRef)}
 
 
-
-
+                    <InquiryForm isOpen={isFormOpen} onClose={closeForm} propertyName={selectedProperty} />
 
 
                     <h2 className='font-bold text-4xl w-full text-center my-16 mt-32'>Words Can Change The World! </h2>
